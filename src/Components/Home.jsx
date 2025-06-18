@@ -3,6 +3,7 @@ import CardDetails from './CardDetails';
 import { useLoaderData, useNavigate } from 'react-router';
 import Banner from './Banner';
 import { BsFillCupFill } from 'react-icons/bs';
+import Gellery from './Gellery';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ const Home = () => {
                 
                 </div>
             </div>
+            <Gellery></Gellery>
             
         </div>
     );
