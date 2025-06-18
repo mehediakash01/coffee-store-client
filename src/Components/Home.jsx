@@ -20,7 +20,7 @@ const Home = () => {
             </div>
                 <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 items-center  p-5'>
                     {
-                        InitialCoffees.map(coffee=>  <CardDetails coffeeData={coffeeData} setCoffeeData={setCoffeeData} key={coffee._id} coffee={coffee}></CardDetails>)
+                        coffeeData.map(coffee=>  <CardDetails coffee={coffee} setCoffeeData={setCoffeeData} key={coffee._id} ></CardDetails>)
                     }
                 
                 </div>

@@ -1,10 +1,12 @@
 import { ArrowLeft } from "lucide-react";
 import React from "react";
 import { useLoaderData, useNavigate } from "react-router";
+import Swal from "sweetalert2";
 
 const Update = () => {
   const navigate = useNavigate();
   const Coffees = useLoaderData();
+  console.log(Coffees);
   const {
     _id,
     name,
@@ -21,15 +23,26 @@ const Update = () => {
     const form = e.target;
     const formData = new FormData(form);
     const UpdatedData = Object.fromEntries(formData.entries());
-    fetch(`http://localhost:5173/update/${_id}`, {
+    fetch(`http://localhost:3000/coffees/${_id}`, {
       method: "PUT",
       headers: {
-        Content_Type: "Application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(UpdatedData),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.modifiedCount) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your coffee has been saved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate('/')
+        }
+      });
   };
   return (
     <div className="w-11/12 mx-auto ">
