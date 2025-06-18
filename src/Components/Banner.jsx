@@ -1,27 +1,24 @@
 import React from 'react';
 
 const Banner = () => {
-    return (
-        <div
-  className="hero min-h-screen"
-  style={{
-    backgroundImage:
-      "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
-  }}
->
-  <div className="hero-overlay"></div>
-  <div className="hero-content text-neutral-content text-center">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button className="btn btn-primary">Get Started</button>
+  return (
+    
+    <div className='relative  h-[550px]'>
+<div className="absolute inset-0 bg-gradient-to-t from-black/60 z-10"></div>
+ <div className="bg-[url('/images/more/3.png')] bg-cover bg-center h-full relative z-0">
+    <div className="text-white  pt-24  z-20 text-center mt-20" >
+      <h1 className='text-3xl font-bold' >
+      Would you like a Cup of Delicious Coffee?
+      </h1>
+      <p>It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! <br />
+        Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
+       <button  className='bg-[#E3B577] btn text-white border-[#331A15]'>Explore more <span className='text-[#331A15]'> </span></button>
     </div>
   </div>
-</div>
-    );
+
+      
+    </div>
+  );
 };
 
 export default Banner;
