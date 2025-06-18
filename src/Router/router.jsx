@@ -5,9 +5,11 @@ import Update from "../Components/Update";
 import CardDetails from "../Components/CardDetails";
 import AddCoffee from "../Components/AddCoffee";
 import CoffeDetails from "../Components/CoffeDetails";
+import ErrorPage from "../Components/Root/ErrorPage";
 export const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage></ErrorPage>,
     Component: Root,
     children: [
       {
