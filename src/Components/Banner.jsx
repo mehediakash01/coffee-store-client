@@ -3,10 +3,10 @@ import React from 'react';
 const Banner = () => {
   return (
     
-    <div className='relative  h-[550px]'>
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 z-10"></div>
+    <div className='relative  h-[80vh]'>
+
  <div className="bg-[url('/images/more/3.png')] bg-cover bg-center h-full relative z-0">
-    <div className="text-white  pt-24  z-20 text-center mt-20" >
+    <div className="text-white  pt-24  z-20 absolute ml-[750px] mt-40" >
       <h1 className='text-3xl font-bold' >
       Would you like a Cup of Delicious Coffee?
       </h1>

@@ -11,7 +11,7 @@ const Home = () => {
     const InitialCoffees = useLoaderData();
  const [coffeeData,setCoffeeData] = useState(InitialCoffees);
     return (
-        <div className='my-10'>
+        <div >
             <Banner></Banner>
             <div className='bg-[url("/images/more/1.png")] p-22  bg-contain bg-no-repeat'>
             <div className='text-center space-y-2'>
