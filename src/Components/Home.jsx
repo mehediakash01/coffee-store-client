@@ -4,6 +4,7 @@ import { useLoaderData, useNavigate } from 'react-router';
 import Banner from './Banner';
 import { BsFillCupFill } from 'react-icons/bs';
 import Gellery from './Gellery';
+import SpecialItems from './SpecialItems';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -26,6 +27,7 @@ const Home = () => {
                 
                 </div>
             </div>
+            <SpecialItems></SpecialItems>
             <Gellery></Gellery>
             
         </div>
