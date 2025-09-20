@@ -5,6 +5,7 @@ import Banner from './Banner';
 import { BsFillCupFill } from 'react-icons/bs';
 import Gellery from './Gellery';
 import SpecialItems from './SpecialItems';
+import PopularMenu from './PopularMenu';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -28,6 +29,7 @@ const Home = () => {
                 </div>
             </div>
             <SpecialItems></SpecialItems>
+            <PopularMenu></PopularMenu>
             <Gellery></Gellery>
             
         </div>
