@@ -10,3 +10,6 @@
 body{
     font-family: 'Rancho',cursive;
 }
+.active{
+  @apply text-[#E3B577] font-bold
+}
