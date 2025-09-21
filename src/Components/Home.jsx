@@ -6,6 +6,7 @@ import { BsFillCupFill } from 'react-icons/bs';
 import Gellery from './Gellery';
 import SpecialItems from './SpecialItems';
 import PopularMenu from './PopularMenu';
+import Hero from './Hero';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -14,7 +15,8 @@ const Home = () => {
  const [coffeeData,setCoffeeData] = useState(InitialCoffees);
     return (
         <div >
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
+            <Hero></Hero>
             <div className='bg-[url("/images/more/1.png")] p-22  bg-contain bg-no-repeat'>
             <div className='text-center space-y-2'>
                 <p>--- Sip & Savor ---</p>
