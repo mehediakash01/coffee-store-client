@@ -41,7 +41,7 @@ const Header = () => {
           </div>
           <div className="flex  items-center gap-2">
             <img
-              className="w-14 h-20"
+              className="w-12"
               src="/public/images/more/logo1.png"
               alt=""
             />
