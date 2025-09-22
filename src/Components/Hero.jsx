@@ -3,8 +3,8 @@ import React from 'react';
 const Hero = () => {
     return (
        <div className="bg-[url('https://kofi-demo.myshopify.com/cdn/shop/files/beans-1.png?v=1635847936')] bg-cover bg-center bg-[#f1f1f1] p-6" >
-        <div className='w-11/12 mx-auto flex justify-between items-center py-12'>
-            <div className='mx-6 '>
+        <div className='w-11/12 mx-auto flex justify-around items-center py-12'>
+            <div className=' '>
                 <p className='opacity-80 text-2xl my-3'>Fresh Coffee fuels Dreams</p>
                 <h1 className='text-6xl font-extrabold my-5'>WAKE YOUR SOUL <br />
               SIP BY SIP</h1>

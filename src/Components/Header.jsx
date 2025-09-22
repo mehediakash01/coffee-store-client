@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div >
       <div className='navbar bg-[url("https://i.ibb.co/jvB0xmwX/Rectangle-1.png")] bg-cover bg-center'>
-        <div className="navbar-start mx-12">
+        <div className="navbar-start ml-32">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -45,13 +45,13 @@ const Header = () => {
               src="/public/images/more/logo1.png"
               alt=""
             />
-            <h1 className="text-white text-2xl">Espresso </h1>
+            <h1 className="text-white text-xl">Espresso </h1>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
             {navLinks}
         </div>
-        <div className="navbar-end mx-12">
+        <div className="navbar-end mr-32">
             
          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className=" rounded-full">
