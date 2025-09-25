@@ -5,7 +5,7 @@ const Gellery = () => {
     <div className="w-11/12 mx-auto">
       <div className="text-center my-4">
         <p>follow us now</p>
-        <h1 className="text-[#331A15] text-4xl">Follow On Instagram</h1>
+        <h1 className="text-[#331A15] text-4xl">Follow Us On Instagram</h1>
       </div>
       <div className="w-11/12 mx-auto grid grid-cols-4 gap-6 rounded-md my-12">
         <img className="w-[312px]" src="/images/cups/Rectangle 9.png" alt="" />
