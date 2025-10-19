@@ -7,6 +7,7 @@ import AddCoffee from "../Components/AddCoffee";
 import CoffeDetails from "../Components/CoffeDetails";
 import ErrorPage from "../Components/Root/ErrorPage";
 import Login from "../Components/Login";
+import Register from "../Components/Register";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path:"/login",
         Component: Login
+      },
+      {
+        path:"/register",
+        Component: Register
       }
     ],
   },
