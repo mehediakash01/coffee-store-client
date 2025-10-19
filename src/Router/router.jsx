@@ -6,6 +6,7 @@ import CardDetails from "../Components/CardDetails";
 import AddCoffee from "../Components/AddCoffee";
 import CoffeDetails from "../Components/CoffeDetails";
 import ErrorPage from "../Components/Root/ErrorPage";
+import Login from "../Components/Login";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
 
         Component: CoffeDetails,
       },
+      {
+        path:"/login",
+        Component: Login
+      }
     ],
   },
 ]);
