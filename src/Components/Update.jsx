@@ -23,7 +23,7 @@ const Update = () => {
     const form = e.target;
     const formData = new FormData(form);
     const UpdatedData = Object.fromEntries(formData.entries());
-    fetch(`http://localhost:3000/coffees/${_id}`, {
+    fetch(`http://localhost:5000/coffees/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

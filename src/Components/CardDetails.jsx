@@ -23,7 +23,7 @@ Swal.fire({
   confirmButtonText: "Yes, delete it!"
 }).then((result) => {
   if (result.isConfirmed) {
-     axios.delete(`http://localhost:3000/coffees/${id}`)
+     axios.delete(`http://localhost:5000/coffees/${id}`)
      setCoffeeData((prev)=>prev.filter(coff=>coff._id!==id));
     Swal.fire({
       title: "Deleted!",

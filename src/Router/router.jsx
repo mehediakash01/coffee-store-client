@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("http://localhost:3000/coffees"),
+        loader: () => fetch("http://localhost:5000/coffees"),
         Component: Home,
       },
       {
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       {
         path: "/update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffees/${params.id}`),
+          fetch(`http://localhost:5000/coffees/${params.id}`),
         Component: Update,
       },
       {
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
       {
         path: "/coffeeDetails/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffees/${params.id}`),
+          fetch(`http://localhost:5000/coffees/${params.id}`),
 
         Component: CoffeDetails,
       },

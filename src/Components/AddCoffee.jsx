@@ -11,7 +11,7 @@ const AddCoffee = () => {
     const formData = new FormData(form);
     const addNewData = Object.fromEntries(formData.entries());
     console.log(addNewData);
-    fetch("http://localhost:3000/coffees", {
+    fetch("http://localhost:5000/coffees", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
