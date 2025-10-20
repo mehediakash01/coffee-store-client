@@ -90,16 +90,7 @@ const Register = () => {
                 </div>
               </div>
 
-              {/* Terms & Conditions */}
-              <div className="flex items-center text-sm">
-                <input type="checkbox" className="checkbox checkbox-sm mr-2" required />
-                <p className="text-gray-600">
-                  I agree to the{" "}
-                  <a href="#" className="text-amber-700 hover:underline">
-                    Terms & Conditions
-                  </a>
-                </p>
-              </div>
+             
 
               {/* Register Button */}
               <button type="submit" className="btn bg-amber-700 hover:bg-amber-800 text-white w-full">
