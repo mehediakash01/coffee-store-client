@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router"; 
+import { AuthContext } from "./Context/AuthContext";
 
 const Header = () => {
   const navigate = useNavigate();
 
  
-  const user = null; 
+  const {user} = useContext(AuthContext);
+  console.log(user?.photoURL);
 
   const navLinks = (
     <ul className="flex gap-4 text-white">
@@ -60,7 +62,7 @@ const Header = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="User avatar"
-                  src={user.photoURL || "https://i.pinimg.com/originals/1f/bd/e8/1fbde8d9c2d5061dbaefb8afe0e97d05.jpg"}
+                  src={"https://img.etimg.com/thumb/width-640,height-480,imgsize-48060,resizemode-75,msid-96431090/news/international/us/now-manchester-united-bids-final-goodbye-to-cristiano-ronaldo-see-how.jpg"}
                 />
               </div>
             </div>
