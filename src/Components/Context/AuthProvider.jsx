@@ -54,18 +54,19 @@ const AuthProvider = ({ children }) => {
   };
 
   // Update user profile
-  const updateUser = (moreInfo) => {
-    return updateProfile(auth.currentUser, moreInfo)
-      .then(() => {
-        // Update local state with new info
-        setUser({ ...auth.currentUser });
-        toast.success("Profile updated successfully! ✨");
-      })
-      .catch((error) => {
-        toast.error("Failed to update profile");
-        throw error;
-      });
-  };
+  // Update user profile
+const updateUser = (moreInfo) => {
+  return updateProfile(auth.currentUser, moreInfo)
+    .then(() => {
+      // Update local state with new info
+      setUser({ ...auth.currentUser });
+      // Remove toast from here
+    })
+    .catch((error) => {
+      console.error("Profile update error:", error);
+      throw error;
+    });
+};
 
   // Logout user
   const logoutUser = () => {

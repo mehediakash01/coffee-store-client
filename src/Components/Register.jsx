@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "./Context/AuthContext";
 
-
 const Register = () => {
   const { createUser, updateUser, loading } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -28,6 +27,9 @@ const Register = () => {
       return;
     }
 
+    // Show loading toast
+    const toastId = toast.loading("Creating your account...");
+
     try {
       // Create user
       const result = await createUser(email, password);
@@ -39,26 +41,44 @@ const Register = () => {
       });
 
       // Save user to backend database
-      await fetch("http://localhost:3000/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          uid: result.user.uid,
-          name: name,
-          email: email,
-          photoURL: photoURL,
-          registerAt: new Date().toISOString(),
-          role: "customer",
-        }),
+      try {
+        const response = await fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            uid: result.user.uid,
+            name: name,
+            email: email,
+            photoURL: photoURL,
+            registerAt: new Date().toISOString(),
+            role: "customer",
+          }),
+        });
+
+        if (!response.ok) {
+          console.warn("Backend save failed, but Firebase account created");
+        }
+      } catch (dbError) {
+        console.warn("Database error:", dbError);
+        // Continue anyway - Firebase account was created
+      }
+
+      // Dismiss loading and show success
+      toast.dismiss(toastId);
+      toast.success("Account created successfully! Welcome aboard! ☕", {
+        duration: 2000,
       });
 
-      toast.success("Account created successfully! Welcome aboard! ☕");
       form.reset();
-      
+
       setTimeout(() => {
         navigate("/");
-      }, 1500);
+      }, 2000);
+
     } catch (error) {
+      // Dismiss loading toast
+      toast.dismiss(toastId);
+
       // Handle Firebase errors
       let errorMessage = "Registration failed. Please try again.";
 
@@ -72,14 +92,40 @@ const Register = () => {
         errorMessage = "Network error. Please check your connection.";
       }
 
-      toast.error(errorMessage);
+      toast.error(errorMessage, {
+        duration: 3000,
+      });
       console.error("Registration error:", error);
     }
   };
 
   return (
     <>
-      <Toaster position="top-center" reverseOrder={false} />
+      <Toaster 
+        position="top-center" 
+        reverseOrder={false}
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+          success: {
+            duration: 2000,
+            iconTheme: {
+              primary: '#d97706',
+              secondary: '#fff',
+            },
+          },
+          error: {
+            duration: 3000,
+            iconTheme: {
+              primary: '#ef4444',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-amber-100 to-orange-100 px-4 py-8">
         <div className="flex flex-col lg:flex-row overflow-hidden rounded-2xl shadow-2xl max-w-4xl w-full bg-white">
           {/* Left side - Image */}
