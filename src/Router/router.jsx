@@ -9,6 +9,7 @@ import ErrorPage from "../Components/Root/ErrorPage";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import CoffeeMenu from "../Components/CoffeeMenu";
+import AboutUs from "../Components/AboutUs";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path:"/menu",
         Component: CoffeeMenu
+      },
+      {
+        path:"/about",
+        Component: AboutUs
       },
       {
         path:"/login",
