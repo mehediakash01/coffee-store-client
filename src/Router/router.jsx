@@ -10,6 +10,7 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import CoffeeMenu from "../Components/CoffeeMenu";
 import AboutUs from "../Components/AboutUs";
+import CoffeeCatalog from "../Components/CoffeeCatalog";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path:"/about",
         Component: AboutUs
+      },
+      {
+        path:"/allProducts",
+        Component: CoffeeCatalog
       },
       {
         path:"/login",
