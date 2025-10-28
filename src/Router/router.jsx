@@ -8,6 +8,7 @@ import CoffeDetails from "../Components/CoffeDetails";
 import ErrorPage from "../Components/Root/ErrorPage";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
+import CoffeeMenu from "../Components/CoffeeMenu";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
           fetch(`http://localhost:5000/coffees/${params.id}`),
 
         Component: CoffeDetails,
+      },
+      {
+        path:"/menu",
+        Component: CoffeeMenu
       },
       {
         path:"/login",
