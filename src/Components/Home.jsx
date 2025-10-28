@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+
 import CardDetails from './CardDetails';
-import { useLoaderData, useNavigate } from 'react-router';
+import { useLoaderData } from 'react-router';
 import Banner from './Banner';
 import { BsFillCupFill } from 'react-icons/bs';
 import Gellery from './Gellery';
@@ -9,15 +9,15 @@ import PopularMenu from './PopularMenu';
 import Hero from './Hero';
 
 const Home = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
    
     const InitialCoffees = useLoaderData();
- const [coffeeData,setCoffeeData] = useState(InitialCoffees);
+//  const [coffeeData,setCoffeeData] = useState(InitialCoffees);
     return (
         <div >
             {/* <Banner></Banner> */}
             <Hero></Hero>
-            <div className='bg-[url("/images/more/1.png")] p-22  bg-contain bg-no-repeat'>
+            {/* <div className='bg-[url("/images/more/1.png")] p-22  bg-contain bg-no-repeat'>
             <div className='text-center space-y-2'>
                 <p>--- Sip & Savor ---</p>
                 <h1 className='text-[#331A15] text-4xl'>Our Popular Products</h1>
@@ -29,7 +29,7 @@ const Home = () => {
                     }
                 
                 </div>
-            </div>
+            </div> */}
             <SpecialItems></SpecialItems>
             <PopularMenu></PopularMenu>
             <Gellery></Gellery>
