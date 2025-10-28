@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Star, ArrowRight, Sparkles, TrendingUp, Award, ChevronLeft, Heart, Share2, ShoppingCart, MapPin } from 'lucide-react';
+import FeaturedCoffeeDetails from './FeaturedCoffeeDetails';
 
 // Featured Coffee Data
 const featuredCoffees = [
@@ -132,7 +133,7 @@ export default function FeaturedCoffeeSection() {
   const [selectedCoffee, setSelectedCoffee] = useState(null);
 
   if (selectedCoffee) {
-    return <CoffeeDetailPage coffee={selectedCoffee} onBack={() => setSelectedCoffee(null)} />;
+    return <FeaturedCoffeeDetails coffee={selectedCoffee} onBack={() => setSelectedCoffee(null)} />;
   }
 
   return (

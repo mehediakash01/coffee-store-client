@@ -7,6 +7,7 @@ import Gellery from './Gellery';
 import SpecialItems from './SpecialItems';
 import PopularMenu from './PopularMenu';
 import Hero from './Hero';
+import FeaturedCoffeeSection from './FeaturedCoffee';
 
 const Home = () => {
     // const navigate = useNavigate();
@@ -30,6 +31,7 @@ const Home = () => {
                 
                 </div>
             </div> */}
+            <FeaturedCoffeeSection/>
             <SpecialItems></SpecialItems>
             <PopularMenu></PopularMenu>
             <Gellery></Gellery>
