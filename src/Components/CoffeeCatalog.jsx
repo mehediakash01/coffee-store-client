@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Coffee, MapPin, Star, ArrowRight, ChevronLeft, Heart, Share2, ShoppingCart } from 'lucide-react';
+import CoffeeDetailPage from './CoffeeDetailsPage';
 
 // Coffee Catalog Data - Ready for API
 const coffeeData = [

@@ -18,7 +18,7 @@ const Header = () => {
   const navLinks = (
     <ul className="flex gap-4 text-white">
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/products">Products</NavLink>
+      <NavLink to="/AllProducts">Products</NavLink>
       <NavLink to="/menu">Our Menu</NavLink>
       <NavLink to="/about">About Us</NavLink>
     </ul>
